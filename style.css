@@ -1,5 +1,5 @@
 body {
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(87, 108, 117, 1) 0%, rgba(37, 50, 55, 1) 100.2%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, #FF416C 0%, #FF4B2B 100.2%);
     font-family: 'Montserrat', sans-serif;
 }
 

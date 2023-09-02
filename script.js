@@ -12,19 +12,13 @@ function clr() {
     document.getElementById("result").innerHTML = ""
 }
 
-function copyStringToClipboard(str) {
-    var el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.style = { position: 'absolute', left: '-9999px' };
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
+function copyStringToClipboard() {
 }
 
 function copy() {
-    var result = document.getElementById("result").innerHTML;
-    copyStringToClipboard(result);
+    var copyText = document.getElementById("result");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    navigator.clipboard.writeText(copyText.value);
     alert("Result copied !\n" + result);
 }
